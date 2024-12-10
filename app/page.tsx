@@ -1,9 +1,9 @@
 export default function HomePage() {
   return (
-    <div>
-      <h1>Welcome to My Portfolio</h1>
-      <p>Discover my latest work, skills, and background.</p>
-      <a href="/portfolio">View My Portfolio</a>
+    <div style={{ padding: '20px' }}>
+      <h1>Welcome to My Creative Lair!</h1>
+      <p>Where pixels party, code conquers, and ideas run wild.</p>
+      <p>Dive in, explore, and see what happens when genius meets JavaScript!</p>
     </div>
   );
 }

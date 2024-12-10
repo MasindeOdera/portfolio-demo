@@ -15,10 +15,10 @@ import { HomeIcon, UserIcon, CameraIcon, CogIcon } from '@heroicons/react/24/sol
 const inter = Inter({ subsets: ['latin'] });
 
 const Navigation = styled.nav`
-  margin-top: 60px;
+  margin: ${theme.spacing.largest} auto;
   width: 340px;
   height: 74px;
-  background: #fff;
+  background: ${theme.colors.white};
   position: relative;
   display: flex;
   justify-content: center;
@@ -27,7 +27,6 @@ const Navigation = styled.nav`
 `;
 
 const NavList = styled.ul`
-  // display: flex;
   display: contents;
   width: 350px;
 `;
@@ -36,7 +35,6 @@ const NavItem = styled.li<{ $active: boolean }>`
   position: relative;
   list-style: none;
   width: 25%;
-  // width: 70px;
   height: 74px;
   z-index: 1;
 
@@ -57,16 +55,14 @@ const NavItem = styled.li<{ $active: boolean }>`
       font-size: 1em;
       text-align: center;
       transition: 0.5s;
-      color: var(--clr);
+      color: ${theme.colors.background};
     }
 
     .text {
       position: absolute;
-      color: var(--clr);
+      color: ${theme.colors.background};
       font-weight: 700;
       font-size: 1em;
-      // font-weight: 400;
-      // font-size: 0.75em;
       letter-spacing: 0.05em;
       transition: 0.5s;
       opacity: 0;
@@ -78,6 +74,7 @@ const NavItem = styled.li<{ $active: boolean }>`
     $active &&
     `a .icon {
       transform: translateY(-35px);
+      color: ${theme.colors.text};
     }
 
     a .text {
@@ -92,9 +89,9 @@ const Indicator = styled.div<{ $activeindex: number }>`
   left: 0%;
   width: 74px;
   height: 74px;
-  background: #29fd53;
+  background: ${theme.colors.secondary};
   border-radius: 50%;
-  border: 6px solid #f4f4f9;
+  border: 6px solid #212327;
   transition: 0.5s;
   transform: ${({ $activeindex }) => `translateX(calc(85px * ${$activeindex}))`};
 
@@ -107,13 +104,13 @@ const Indicator = styled.div<{ $activeindex: number }>`
     height: 20px;
     background: transparent;
     border-top-right-radius: 20px;
-    box-shadow: 1px -10px 0 0 #f4f4f9;
+    box-shadow: 1px -10px 0 0 #212327;
   }
 
   &:after {
     right: -22px;
     border-top-left-radius: 20px;
-    box-shadow: -1px -10px 0 0 #f4f4f9;
+    box-shadow: -1px -10px 0 0 #212327;
   }
 
   &:before {
@@ -150,7 +147,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       href={link.href} 
                       aria-current={pathname === link.href ? 'page' : undefined} 
                     >
-                      <span className="icon">
+                      <span className="icon" title={link.name}>
                         {link.icon}
                       </span>
                       <span className="text">{link.name}</span>
@@ -162,9 +159,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Navigation>
           </header>
           <main>{children}</main>
-          <footer>
-            <p>© 2024 Portfolio Demo. All rights reserved.</p>
-          </footer>
         </ThemeProvider>
       </body>
     </html>
