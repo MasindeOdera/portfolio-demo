@@ -6,6 +6,9 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Inter', sans-serif;
     background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   a {
