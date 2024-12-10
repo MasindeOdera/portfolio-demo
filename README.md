@@ -1,4 +1,5 @@
-# Portfolio Website with Admin Panel
+# Portfolio demo
+---
 
 ## **Getting Started**
 
@@ -12,8 +13,8 @@ Ensure you have the following installed on your system:
 ### **Installation**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/portfolio-admin.git
-   cd portfolio-admin
+   git clone https://github.com/MasindeOdera/portfolio-demo.git
+   cd portfolio-demo
    ```
 
 2. Install dependencies:
