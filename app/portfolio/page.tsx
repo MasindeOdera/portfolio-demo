@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import Image from 'next/image';
+import styled from "styled-components";
+import ProjectCard from "../components/ProjectCard";
 
 type Project = {
   id: number;
@@ -9,6 +10,14 @@ type Project = {
   image: string;
   description: string;
 };
+
+const PortfolioContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+`;
 
 export default function PortfolioPage() {
     const [projects, setProjects] = useState<Project[]>([]);
@@ -27,16 +36,19 @@ export default function PortfolioPage() {
     }, []);
   
     return (
-      <div>
+      <div style={{ textAlign: 'center' }}>
         <h1>Portfolio</h1>
-        {projects.map((project) => (
-          <div key={project.id}>
-            <h2>{project.project}</h2>
-            <Image src={project.image} alt={project.project} width={300} height={220} />
-            <p>{project.description}</p>
-          </div>
-        ))}
+        <PortfolioContainer>
+          {projects.map((project) => (
+            <ProjectCard 
+              key={project.id} 
+              title={project.project} 
+              description={project.description} 
+              imageUrl={project.image} 
+            />
+          ))}
+        </PortfolioContainer>
       </div>
     );
-  }
+}
   

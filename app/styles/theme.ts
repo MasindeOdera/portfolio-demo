@@ -1,9 +1,10 @@
 export const theme = {
     colors: {
-        primary: '#0070f3', //blue
+        primary: '#545454', //light version of dark
         secondary: '#1db954', //green
         background: '#212327', //dark
         text: '#f4f4f9', //light
+        detail: '#d3d3d3',
         white: '#ffffff',
     },
     spacing: {
