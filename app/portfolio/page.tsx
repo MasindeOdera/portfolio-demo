@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProjectCard from "../components/ProjectCard";
+import { theme } from "../styles/theme";
 
 type Project = {
   id: number;
@@ -17,6 +18,12 @@ const PortfolioContainer = styled.div`
   justify-content: center;
   gap: 20px;
   padding: 20px;
+`;
+
+const InfoText = styled.p`
+  margin: 10px 0 20px;
+  font-size: 1rem;
+  color: ${theme.colors.detail};
 `;
 
 export default function PortfolioPage() {
@@ -38,6 +45,9 @@ export default function PortfolioPage() {
     return (
       <div style={{ textAlign: 'center' }}>
         <h1>Portfolio</h1>
+        <InfoText>
+          The projects displayed below are for demonstration purposes and can be updated, edited, or removed via the <strong>Admin</strong> section.
+        </InfoText>
         <PortfolioContainer>
           {projects.map((project) => (
             <ProjectCard 
