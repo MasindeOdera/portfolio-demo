@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProjectCard from "../components/ProjectCard";
+import SkeletonLoader from "../components/SkeletonLoader";
 import { theme } from "../styles/theme";
 
 type Project = {
@@ -28,6 +29,7 @@ const InfoText = styled.p`
 
 export default function PortfolioPage() {
     const [projects, setProjects] = useState<Project[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
   
     useEffect(() => {
       async function fetchProjects() {
@@ -37,6 +39,8 @@ export default function PortfolioPage() {
           setProjects(data);
         } catch (error) {
           console.error('Failed to fetch projects:', error);
+        } finally {
+          setLoading(false); // Loading is complete
         }
       }
       fetchProjects();
@@ -49,14 +53,22 @@ export default function PortfolioPage() {
           The projects displayed below are for demonstration purposes and can be updated, edited, or removed via the <strong>Admin</strong> section.
         </InfoText>
         <PortfolioContainer>
-          {projects.map((project) => (
+        {loading ? (
+          // Show 6 skeleton loaders while loading
+          Array.from({ length: 6 }).map((_, index) => (
+            <SkeletonLoader key={index} />
+          ))
+        ) : (
+          // Show real project cards after loading
+          projects.map((project) => (
             <ProjectCard 
               key={project.id} 
               title={project.project} 
               description={project.description} 
               imageUrl={project.image} 
             />
-          ))}
+          ))
+        )}
         </PortfolioContainer>
       </div>
     );
