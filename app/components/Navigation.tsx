@@ -1,4 +1,4 @@
-'use client'; // This allows us to use hooks like usePathname
+'use client';
 
 import React from 'react';
 import Link from 'next/link';

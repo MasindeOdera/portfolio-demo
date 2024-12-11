@@ -1,13 +1,15 @@
 'use client';
 
+import { theme } from "./styles/theme";
+
 export default function Loading() {
     return (
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh' }}>
         <div style={{
-          width: '50px',
-          height: '50px',
-          border: '5px solid #f3f3f3',
-          borderTop: '5px solid #3498db',
+          width: '100px',
+          height: '100px',
+          border: `5px solid ${theme.colors.white}`,
+          borderTop: `5px solid ${theme.colors.secondary}`,
           borderRadius: '50%',
           animation: 'spin 1s linear infinite',
         }} />
