@@ -9,6 +9,8 @@ const ProfileImageContainer = styled.div`
   position: relative;
   width: 150px;
   height: 150px;
+  min-width: 150px;
+  min-height: 150px;
   margin: 10px auto;
   border-radius: 50%;
   overflow: hidden;
@@ -29,7 +31,8 @@ export default function HomePage() {
         <Image
           src="/profile.jpg" 
           alt="My Profile Picture" 
-          fill 
+          width={150} 
+          height={150}  
           style={{ objectFit: 'cover' }} 
           priority
         />
