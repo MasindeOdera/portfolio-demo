@@ -36,6 +36,7 @@ export default function ProfileImage({ size = 150 }: ProfileImageProps) {
         height={size} 
         style={{ objectFit: 'cover' }} 
         priority 
+        onError={(e) => e.currentTarget.src = '/fallback.png'}
       />
     </ProfileImageContainer>
   );
