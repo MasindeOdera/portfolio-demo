@@ -3,11 +3,15 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import { theme } from '../styles/theme';
+import { PencilIcon, TrashIcon } from '@heroicons/react/24/solid';
 
 interface ProjectCardProps {
   title: string;
   description: string;
   imageUrl: string;
+  onDelete?: () => void;
+  onEdit?: () => void;
+  isAdmin?: boolean;
 }
 
 const CardContainer = styled.div`
@@ -18,10 +22,11 @@ const CardContainer = styled.div`
   background-color: ${theme.colors.primary};
   color: ${theme.colors.text};
   box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.6s ease;
   opacity: 0;
   transform: translateY(10px);
   animation: fadeIn 0.6s ease forwards;
+  position: relative;
 
   &:hover {
     transform: translateY(0px);
@@ -64,9 +69,36 @@ const CardDescription = styled.p`
   color: ${theme.colors.detail};
 `;
 
-export default function ProjectCard({ title, description, imageUrl }: ProjectCardProps) {
+const ActionIcons = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 20;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: ${theme.colors.text};
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: ${theme.colors.secondary};
+    }
+  }
+`;
+
+export default function ProjectCard({ title, description, imageUrl, onDelete, onEdit, isAdmin = false }: ProjectCardProps) {
   return (
     <CardContainer>
+      {isAdmin && (
+        <ActionIcons>
+          <PencilIcon onClick={onEdit} title="Edit Project" />
+          <TrashIcon onClick={onDelete} title="Delete Project" />
+        </ActionIcons>
+      )}
       <ImageContainer>
         <Image 
           src={imageUrl} 

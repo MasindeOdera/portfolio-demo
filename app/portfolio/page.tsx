@@ -40,7 +40,7 @@ export default function PortfolioPage() {
         } catch (error) {
           console.error('Failed to fetch projects:', error);
         } finally {
-          setLoading(false); // Loading is complete
+          setLoading(false);
         }
       }
       fetchProjects();
