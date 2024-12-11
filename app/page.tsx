@@ -29,8 +29,8 @@ export default function HomePage() {
         <Image
           src="/profile.jpg" 
           alt="My Profile Picture" 
-          layout="fill" 
-          objectFit="cover" 
+          fill 
+          style={{ objectFit: 'cover' }} 
           priority
         />
       </ProfileImageContainer>

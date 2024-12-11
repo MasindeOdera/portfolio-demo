@@ -5,7 +5,12 @@ const nextConfig: NextConfig = {
     styledComponents:true
   },
   images: {
-    domains: ['loremflickr.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'loremflickr.com',
+      },
+    ],
   },
 };
 
