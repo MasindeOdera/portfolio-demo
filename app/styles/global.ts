@@ -1,12 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
+import { theme } from './theme';
 
 export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #212327;
-    color: #f4f4f9;
+    background-color: ${theme.colors.background};
+    color: ${theme.colors.text};
     display: flex;
     flex-direction: column;
     align-items: center;
