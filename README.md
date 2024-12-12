@@ -1,6 +1,7 @@
 ## **Getting Started**
 
 See it here: [https://portfolio-demo-beryl-theta.vercel.app/](https://portfolio-demo-beryl-theta.vercel.app/)
+
 Otherwise get a local copy of the project up and running, follow these steps:
 
 ### **Prerequisites**
@@ -64,12 +65,12 @@ Here are some useful scripts you can run:
 ---
 
 ## **Tech Stack**
-- **Framework**: Next.js (App Directory Structure)
+- **Framework**: Next.js
 - **Language**: TypeScript
 - **Styling**: Styled Components
-- **Icons**: HeroIcons
+- **Icons**: [https://heroicons.com/](HeroIcons)
 - **State Management**: Built-in Next.js state hooks
-- **API**: MockAPI for data management
+- **API**: [https://mockapi.io/](MockAPI) for data management
 - **Testing**: Jest and Testing Library
 
 ---
