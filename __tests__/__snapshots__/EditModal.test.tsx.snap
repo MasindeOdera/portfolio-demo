@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditModal Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-blHHSb bkqoCW"
+  >
+    <h2
+      class="sc-gtLWhw jidGLU"
+    >
+      Edit Project
+    </h2>
+    <div
+      class="sc-egkSDF leRVCI"
+    >
+      <div
+        class="sc-fAUdSK icfotn"
+      >
+        <label
+          class="sc-dntaoT gRrdXS"
+          for="title"
+        >
+          Title
+        </label>
+        <input
+          class="sc-ivxoEo iDpIZj"
+          id="title"
+          value="Test Project"
+        />
+        <label
+          class="sc-dntaoT gRrdXS"
+          for="description"
+        >
+          Description
+        </label>
+        <textarea
+          class="sc-ghWlax iwiYDP"
+          id="description"
+        >
+          This is a test project description.
+        </textarea>
+      </div>
+      <div
+        class="sc-kLhKbu egrFSz"
+      >
+        <button
+          class="sc-ixGGxD jYaIng"
+        >
+          Save
+        </button>
+        <button
+          class="sc-ixGGxD jYaIng"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

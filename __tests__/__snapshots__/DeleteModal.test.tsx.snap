@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteModal Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-blHHSb bkqoCW"
+  >
+    <h2
+      class="sc-gtLWhw jidGLU"
+    >
+      Delete Project
+    </h2>
+    <div
+      class="sc-egkSDF leRVCI"
+    >
+      <p
+        class="sc-fAUdSK lhKaBK"
+      >
+        Are you sure you want to delete "Test Project"?
+      </p>
+      <div
+        class="sc-dntaoT eEcZmU"
+      >
+        <button
+          class="sc-ivxoEo KmYNu"
+        >
+          Yes
+        </button>
+        <button
+          class="sc-ivxoEo KmYNu"
+        >
+          No
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

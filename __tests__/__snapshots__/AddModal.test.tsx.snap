@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddModal Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-blHHSb bkqoCW"
+  >
+    <h2
+      class="sc-gtLWhw jidGLU"
+    >
+      Add New Project
+    </h2>
+    <div
+      class="sc-egkSDF leRVCI"
+    >
+      <div
+        class="sc-fAUdSK icfotn"
+      >
+        <label
+          class="sc-dntaoT gRrdXS"
+          for="title"
+        >
+          Title
+        </label>
+        <input
+          class="sc-ghWlax fxkiwY"
+          id="title"
+          value=""
+        />
+        <label
+          class="sc-dntaoT gRrdXS"
+          for="description"
+        >
+          Description
+        </label>
+        <textarea
+          class="sc-kLhKbu hRfzoR"
+          id="description"
+        />
+        <p
+          class="sc-ivxoEo cqzXEI"
+        >
+          Your project screenshot will be automatically generated from a random image.
+        </p>
+      </div>
+      <div
+        class="sc-ixGGxD cBuzsV"
+      >
+        <button
+          class="sc-khLCKb ewVQdg"
+        >
+          Add
+        </button>
+        <button
+          class="sc-khLCKb ewVQdg"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
