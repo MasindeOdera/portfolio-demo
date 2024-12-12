@@ -8,6 +8,14 @@ interface DeleteModalProps {
   onConfirm: () => void;
 }
 
+const Message = styled.p`
+  font-size: 1rem;
+  color: ${theme.colors.background};
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+`;
+
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -40,7 +48,7 @@ const Button = styled.button`
 export default function DeleteModal({ projectTitle, onCancel, onConfirm }: DeleteModalProps) {
   return (
     <ModalContainer title="Delete Project">
-      <p>Are you sure you want to delete &quot;{projectTitle}&quot;?</p>
+      <Message>Are you sure you want to delete &quot;{projectTitle}&quot;?</Message>
       <ButtonContainer>
         <Button onClick={onConfirm}>Yes</Button>
         <Button onClick={onCancel}>No</Button>
