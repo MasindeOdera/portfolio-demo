@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ModalContainer from './ModalContainer';
 import { theme } from '../styles/theme';
 
 interface DeleteModalProps {
@@ -7,28 +8,43 @@ interface DeleteModalProps {
   onConfirm: () => void;
 }
 
-const ModalContainer = styled.div`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: ${theme.colors.text}; //address the font white issue
+const ButtonContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 300px;
-  height: 220px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  justify-content: space-between;
+  margin-top: 20px;
+`;
+
+const Button = styled.button`
+  width: 45%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:nth-child(1) {
+    background-color: ${theme.colors.danger};
+    color: ${theme.colors.text};
+  }
+
+  &:nth-child(2) {
+    background-color: ${theme.colors.secondary};
+    color: ${theme.colors.text};
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
 `;
 
 export default function DeleteModal({ projectTitle, onCancel, onConfirm }: DeleteModalProps) {
   return (
-    <ModalContainer>
+    <ModalContainer title="Delete Project">
       <p>Are you sure you want to delete &quot;{projectTitle}&quot;?</p>
-      <button onClick={onConfirm}>Yes</button>
-      <button onClick={onCancel}>No</button>
+      <ButtonContainer>
+        <Button onClick={onConfirm}>Yes</Button>
+        <Button onClick={onCancel}>No</Button>
+      </ButtonContainer>
     </ModalContainer>
   );
 }

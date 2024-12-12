@@ -84,8 +84,12 @@ const ActionIcons = styled.div`
     color: ${theme.colors.text};
     transition: color 0.3s ease;
 
-    &:hover {
-      color: ${theme.colors.secondary};
+    &:nth-child(1):hover {
+      color: ${theme.colors.edit};
+    }
+
+    &:nth-child(2):hover {
+      color: ${theme.colors.danger};
     }
   }
 `;
