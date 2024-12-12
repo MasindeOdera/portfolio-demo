@@ -43,11 +43,13 @@ export default function AdminDashboard() {
     setIsEditModalOpen(false);
   };
 
+  // Add Skeleton for Admin?
+
   return (
     <div  style={{ padding: '20px', textAlign: 'center' }}>
       <h1>Admin Dashboard</h1>
       <p>Manage your portfolio projects from here.</p>
-      <p>Select the appropriate icon to edit or delete.</p>
+      <p>Select the appropriate icon, located on the top right, to edit or delete.</p>
       <AdminDashboardContainer>
         {projects.map((project) => (
           <ProjectCard 

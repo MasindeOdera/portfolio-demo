@@ -78,8 +78,8 @@ const ActionIcons = styled.div`
   z-index: 20;
 
   svg {
-    width: 24px;
-    height: 24px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     color: ${theme.colors.text};
     transition: color 0.3s ease;
