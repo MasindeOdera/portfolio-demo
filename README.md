@@ -68,9 +68,9 @@ Here are some useful scripts you can run:
 - **Framework**: Next.js
 - **Language**: TypeScript
 - **Styling**: Styled Components
-- **Icons**: [https://heroicons.com/](HeroIcons)
+- **Icons**: [HeroIcons](https://heroicons.com/)
 - **State Management**: Built-in Next.js state hooks
-- **API**: [https://mockapi.io/](MockAPI) for data management
+- **API**: [MockAPI](https://mockapi.io/) for data management
 - **Testing**: Jest and Testing Library
 
 ---
