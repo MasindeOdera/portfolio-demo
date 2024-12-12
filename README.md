@@ -1,6 +1,7 @@
 ## **Getting Started**
 
-To get a local copy of the project up and running, follow these steps:
+See it here: [https://portfolio-demo-beryl-theta.vercel.app/](https://portfolio-demo-beryl-theta.vercel.app/)
+Otherwise get a local copy of the project up and running, follow these steps:
 
 ### **Prerequisites**
 Ensure you have the following installed on your system:
